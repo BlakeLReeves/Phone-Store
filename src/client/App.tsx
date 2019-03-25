@@ -1,24 +1,23 @@
-import * as React from 'react';
+import React, { Component } from 'react';
 
 import './scss/app';
+import Navbar from './shared/Navbar';
+import ProductList from './public/ProductList';
+import Product from './public/Product';
+import Details from './public/Details';
+import Cart from './public/Cart';
+import Default from './public/Default';
 
-interface IAppProps { }
-
-interface IAppState { }
-
-export default class App extends React.Component<IAppProps, IAppState> {
-
-    constructor(props: IAppProps) {
-        super(props);
-
-        this.state = { };
-    }
-
-    render () {
+export default class App extends Component {
+    render() {
         return (
-            <main className="container">
-                <h1 className="covalence-blue">Hello World!</h1>
-            </main>
+            <>
+                <Navbar />
+                <ProductList />
+                <Details />
+                <Cart />
+                <Default />
+            </>
         )
     }
 }
