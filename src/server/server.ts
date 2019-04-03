@@ -8,7 +8,12 @@ let p = path.join(__dirname, '../public');
 console.log(p);
 
 app.use(express.static(p));
+app.use(express.json());
 app.use(apiRouter);
+
+app.use('*', (req, res, next) => {
+    res.sendFile(path.join(__dirname, `../public/index.html`));
+})
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {

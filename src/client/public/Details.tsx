@@ -6,6 +6,6 @@ export default class Details extends Component {
             <div>
                 <h3>Hello from details</h3>
             </div>
-        );
+        )
     }
 }
