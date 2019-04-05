@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+
 import Product from './Product';
 import Title from './Title';
 import { storeProducts } from '../data';
 
-interface IProductListProps { }
+export interface IProductListProps { }
 
-interface IProductListState {
+export interface IProductListState {
     products: Array<{ id: number, title: string, img: string, price: number, inCart: boolean }>;
 }
 

@@ -1,5 +1,6 @@
 
-export const storeProducts = [
+
+export const storeProducts:{id: number, title: string, img: string, price: number, company: string, info: string, inCart: boolean, count: number, total: number}[] = [
   {
     id: 1,
     title: "Google Pixel - Black",
