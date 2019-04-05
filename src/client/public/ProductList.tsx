@@ -15,7 +15,24 @@ export default class ProductList extends React.Component<IProductListProps, IPro
     constructor(props: IProductListProps) {
         super(props);
 
-        this.state = { products: storeProducts };
+        this.state = {
+            products: []
+        };
+    };
+
+    componentDidMount() {
+        this.setProducts();
+    }
+
+    setProducts = () => {
+        let products = [];
+        storeProducts.forEach(item => {
+            const singleItem = { ...item };
+            products = [...products, singleItem];
+        })
+        this.setState(() => {
+            return { products }
+        })
     }
 
     render() {

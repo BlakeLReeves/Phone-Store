@@ -99,7 +99,7 @@ export const storeProducts:{id: number, title: string, img: string, price: numbe
   }
 ];
 
-export const detailProduct = {
+export const detailProduct:{ id: number, title: string, img: string, price: number, company: string, info: string, inCart: boolean, count: number, total: number } = {
   id: 1,
   title: "Google Pixel - Black",
   img: "img/product-1.png",
